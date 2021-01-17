@@ -14,4 +14,4 @@ Solve a Rubiks Cube using Python Opencv and Kociemba module
  
  ### Other details regarding the project you can understand after going through the code
  
- ### I would really like to thank @Dhamareshwarakumar as I have taken his code as my reference and made some tweaks to it so that it will work for my use case
+ ### I would really like to thank @VickneshB as I have taken his code as my reference and made some tweaks to it so that it will work for my use case
