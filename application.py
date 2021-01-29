@@ -9,11 +9,137 @@ from scipy import stats
 
 
 #method handle the case when user makes the wrong move
-def wrong_move_handling(bgr_image_input):
+#not completed please ignore for now
+def wrong_move_handling(bgr_image_input, colors_array):
 
-    if True: # need to replace with certain condition
+    if True: # need to replace with certain condition for showing top face
         cv2.putText(bgr_image_input, "Wrong Move Made. Please Undo Your ove", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,
                 (0, 0, 255), 3)
+        centroid1 = colors_array[8]
+        centroid2 = colors_array[6]
+        centroid3 = colors_array[0]
+        centroid4 = colors_array[2]
+        point1 = (centroid1[5] + (centroid1[7] // 4), centroid1[6] + (centroid1[7] // 2))
+        point2 = (centroid2[5] + (3 * centroid2[8] // 4), centroid2[6] + (centroid2[8] // 2))
+        point3 = (centroid2[5] + (centroid2[7] // 2), centroid2[6] + (centroid2[7] // 4))
+        point4 = (centroid3[5] + (centroid3[8] // 2), centroid3[6] + (3 * centroid3[8] // 4))
+        point5 = (centroid3[5] + (3 * centroid3[8] // 4), centroid3[6] + (centroid3[8] // 2))
+        point6 = (centroid4[5] + (centroid4[8] // 4), centroid4[6] + (centroid4[8] // 2))
+        point7 = (centroid4[5] + (centroid4[8] // 2), centroid4[6] + (3 * centroid4[8] // 4))
+        point8 = (centroid1[5] + (centroid1[8] // 2), centroid1[6] + (centroid1[8] // 4))
+        cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 0), 7, tipLength=0.2)
+        cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 0), 7, tipLength=0.2)
+        cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 0), 7, tipLength=0.2)
+        cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 0), 7, tipLength=0.2)
+        cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 255), 4, tipLength=0.2)
+        cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 255), 4, tipLength=0.2)
+        cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 255), 4, tipLength=0.2)
+        cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 255), 4, tipLength=0.2)
+
+    elif True: # for right face
+        if True:  # need to replace with certain condition for showing top face
+            cv2.putText(bgr_image_input, "Wrong Move Made. Please Undo Your ove", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,
+                        (0, 0, 255), 3)
+            centroid1 = colors_array[8]
+            centroid2 = colors_array[6]
+            centroid3 = colors_array[0]
+            centroid4 = colors_array[2]
+            point1 = (centroid1[5] + (centroid1[7] // 4), centroid1[6] + (centroid1[7] // 2))
+            point2 = (centroid2[5] + (3 * centroid2[8] // 4), centroid2[6] + (centroid2[8] // 2))
+            point3 = (centroid2[5] + (centroid2[7] // 2), centroid2[6] + (centroid2[7] // 4))
+            point4 = (centroid3[5] + (centroid3[8] // 2), centroid3[6] + (3 * centroid3[8] // 4))
+            point5 = (centroid3[5] + (3 * centroid3[8] // 4), centroid3[6] + (centroid3[8] // 2))
+            point6 = (centroid4[5] + (centroid4[8] // 4), centroid4[6] + (centroid4[8] // 2))
+            point7 = (centroid4[5] + (centroid4[8] // 2), centroid4[6] + (3 * centroid4[8] // 4))
+            point8 = (centroid1[5] + (centroid1[8] // 2), centroid1[6] + (centroid1[8] // 4))
+            cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 0), 7, tipLength=0.2)
+            cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 0), 7, tipLength=0.2)
+            cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 0), 7, tipLength=0.2)
+            cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 0), 7, tipLength=0.2)
+            cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 255), 4, tipLength=0.2)
+            cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 255), 4, tipLength=0.2)
+            cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 255), 4, tipLength=0.2)
+            cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 255), 4, tipLength=0.2)
+
+        elif True:#for left face
+            if True:  # need to replace with certain condition for showing top face
+                cv2.putText(bgr_image_input, "Wrong Move Made. Please Undo Your ove", (50, 50),
+                            cv2.FONT_HERSHEY_SIMPLEX, 2,
+                            (0, 0, 255), 3)
+                centroid1 = colors_array[8]
+                centroid2 = colors_array[6]
+                centroid3 = colors_array[0]
+                centroid4 = colors_array[2]
+                point1 = (centroid1[5] + (centroid1[7] // 4), centroid1[6] + (centroid1[7] // 2))
+                point2 = (centroid2[5] + (3 * centroid2[8] // 4), centroid2[6] + (centroid2[8] // 2))
+                point3 = (centroid2[5] + (centroid2[7] // 2), centroid2[6] + (centroid2[7] // 4))
+                point4 = (centroid3[5] + (centroid3[8] // 2), centroid3[6] + (3 * centroid3[8] // 4))
+                point5 = (centroid3[5] + (3 * centroid3[8] // 4), centroid3[6] + (centroid3[8] // 2))
+                point6 = (centroid4[5] + (centroid4[8] // 4), centroid4[6] + (centroid4[8] // 2))
+                point7 = (centroid4[5] + (centroid4[8] // 2), centroid4[6] + (3 * centroid4[8] // 4))
+                point8 = (centroid1[5] + (centroid1[8] // 2), centroid1[6] + (centroid1[8] // 4))
+                cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 255), 4, tipLength=0.2)
+
+        elif True: # for bottom face
+            if True:  # need to replace with certain condition for showing top face
+                cv2.putText(bgr_image_input, "Wrong Move Made. Please Undo Your ove", (50, 50),
+                            cv2.FONT_HERSHEY_SIMPLEX, 2,
+                            (0, 0, 255), 3)
+                centroid1 = colors_array[8]
+                centroid2 = colors_array[6]
+                centroid3 = colors_array[0]
+                centroid4 = colors_array[2]
+                point1 = (centroid1[5] + (centroid1[7] // 4), centroid1[6] + (centroid1[7] // 2))
+                point2 = (centroid2[5] + (3 * centroid2[8] // 4), centroid2[6] + (centroid2[8] // 2))
+                point3 = (centroid2[5] + (centroid2[7] // 2), centroid2[6] + (centroid2[7] // 4))
+                point4 = (centroid3[5] + (centroid3[8] // 2), centroid3[6] + (3 * centroid3[8] // 4))
+                point5 = (centroid3[5] + (3 * centroid3[8] // 4), centroid3[6] + (centroid3[8] // 2))
+                point6 = (centroid4[5] + (centroid4[8] // 4), centroid4[6] + (centroid4[8] // 2))
+                point7 = (centroid4[5] + (centroid4[8] // 2), centroid4[6] + (3 * centroid4[8] // 4))
+                point8 = (centroid1[5] + (centroid1[8] // 2), centroid1[6] + (centroid1[8] // 4))
+                cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 255), 4, tipLength=0.2)
+
+        elif True:# for back face
+            if True:  # need to replace with certain condition for showing top face
+                cv2.putText(bgr_image_input, "Wrong Move Made. Please Undo Your ove", (50, 50),
+                            cv2.FONT_HERSHEY_SIMPLEX, 2,
+                            (0, 0, 255), 3)
+                centroid1 = colors_array[8]
+                centroid2 = colors_array[6]
+                centroid3 = colors_array[0]
+                centroid4 = colors_array[2]
+                point1 = (centroid1[5] + (centroid1[7] // 4), centroid1[6] + (centroid1[7] // 2))
+                point2 = (centroid2[5] + (3 * centroid2[8] // 4), centroid2[6] + (centroid2[8] // 2))
+                point3 = (centroid2[5] + (centroid2[7] // 2), centroid2[6] + (centroid2[7] // 4))
+                point4 = (centroid3[5] + (centroid3[8] // 2), centroid3[6] + (3 * centroid3[8] // 4))
+                point5 = (centroid3[5] + (3 * centroid3[8] // 4), centroid3[6] + (centroid3[8] // 2))
+                point6 = (centroid4[5] + (centroid4[8] // 4), centroid4[6] + (centroid4[8] // 2))
+                point7 = (centroid4[5] + (centroid4[8] // 2), centroid4[6] + (3 * centroid4[8] // 4))
+                point8 = (centroid1[5] + (centroid1[8] // 2), centroid1[6] + (centroid1[8] // 4))
+                cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 0), 7, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point1, point2, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point3, point4, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point5, point6, (0, 0, 255), 4, tipLength=0.2)
+                cv2.arrowedLine(bgr_image_input, point7, point8, (0, 0, 255), 4, tipLength=0.2)
+
+        return
 
 
 # method to concate all the faces in a way so that it can be given to kociemba module
@@ -182,22 +308,13 @@ def face_detection_in_cube(bgr_image_input):
 def rotate_clock_wise(face):
     temp = np.copy(face)
     temp[0, 0], temp[0,1], temp[0,2], temp[0,3], temp[0,4], temp[0,5],temp[0,6],temp[0,7], temp[0,8] = face[0, 6],face[0, 3],face[0, 0],face[0, 7],face[0, 4],face[0, 1],face[0, 8],face[0, 5],face[0, 2]
-
     return temp
 
 # method to rotate particular face counter clock wise or anti clock wise
 # it will the return the values of the face after the rotation is completed
 def rotate_counter_clock_wise(face):
     temp = np.copy(face)
-    temp[0, 8] = face[0, 6]
-    temp[0, 7] = face[0, 3]
-    temp[0, 6] = face[0, 0]
-    temp[0, 5] = face[0, 7]
-    temp[0, 4] = face[0, 4]
-    temp[0, 3] = face[0, 1]
-    temp[0, 2] = face[0, 8]
-    temp[0, 1] = face[0, 5]
-    temp[0, 0] = face[0, 2]
+    temp[0, 8],temp[0, 7],temp[0, 6],temp[0, 5],temp[0, 4],temp[0, 3],temp[0, 2],temp[0, 1], temp[0, 0] = face[0, 6],face[0, 3],face[0, 0],face[0, 7],face[0, 4],face[0, 1],face[0, 8],face[0, 5],face[0, 2]
     return temp
 
 # method to rotate right face clock wise
@@ -827,7 +944,7 @@ def up_face_counter_clock_wise(video,videoWriter,up_face,right_face,front_face,d
         if key_pressed == 27 or key_pressed == ord('q'):
             break
 
-def down_cw(video,videoWriter,up_face,right_face,front_face,down_face,left_face,back_face):
+def down_face_clock_wise(video,videoWriter,up_face,right_face,front_face,down_face,left_face,back_face):
     print("Next Move: D Clockwise")
     temp = np.copy(front_face)
     front_face[0, 6] = left_face[0, 6]
@@ -883,7 +1000,7 @@ def down_cw(video,videoWriter,up_face,right_face,front_face,down_face,left_face,
         if key_pressed == 27 or key_pressed == ord('q'):
             break
 
-def down_ccw(video,videoWriter,up_face,right_face,front_face,down_face,left_face,back_face):
+def down_face_counter_clock_wise(video,videoWriter,up_face,right_face,front_face,down_face,left_face,back_face):
     print("Next Move: D CounterClockwise")
     temp = np.copy(front_face)
     front_face[0, 6] = right_face[0, 6]
@@ -1489,23 +1606,23 @@ def main():
                                                                                            back_face)
                 # print(face_concatenation(up_face, right_face, front_face, down_face, left_face, back_face))
             elif step == "D":
-                [up_face, right_face, front_face, down_face, left_face, back_face] = down_cw(video, videoWriter,
+                [up_face, right_face, front_face, down_face, left_face, back_face] = down_face_clock_wise(video, videoWriter,
                                                                                              up_face, right_face,
                                                                                              front_face, down_face,
                                                                                              left_face, back_face)
                 # print(face_concatenation(up_face, right_face, front_face, down_face, left_face, back_face))
             elif step == "D'":
-                [up_face, right_face, front_face, down_face, left_face, back_face] = down_ccw(video, videoWriter,
+                [up_face, right_face, front_face, down_face, left_face, back_face] = down_face_counter_clock_wise(video, videoWriter,
                                                                                               up_face, right_face,
                                                                                               front_face, down_face,
                                                                                               left_face, back_face)
                 # print(face_concatenation(up_face, right_face, front_face, down_face, left_face, back_face))
             elif step == "D2":
-                [up_face, right_face, front_face, down_face, left_face, back_face] = down_cw(video, videoWriter,
+                [up_face, right_face, front_face, down_face, left_face, back_face] = down_face_clock_wise(video, videoWriter,
                                                                                              up_face, right_face,
                                                                                              front_face, down_face,
                                                                                              left_face, back_face)
-                [up_face, right_face, front_face, down_face, left_face, back_face] = down_cw(video, videoWriter,
+                [up_face, right_face, front_face, down_face, left_face, back_face] = down_face_clock_wise(video, videoWriter,
                                                                                              up_face, right_face,
                                                                                              front_face, down_face,
                                                                                              left_face, back_face)
