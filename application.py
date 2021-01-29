@@ -181,15 +181,8 @@ def face_detection_in_cube(bgr_image_input):
 # it will the return the values of the face after the rotation is completed
 def rotate_clock_wise(face):
     temp = np.copy(face)
-    temp[0, 0] = face[0, 6]
-    temp[0, 1] = face[0, 3]
-    temp[0, 2] = face[0, 0]
-    temp[0, 3] = face[0, 7]
-    temp[0, 4] = face[0, 4]
-    temp[0, 5] = face[0, 1]
-    temp[0, 6] = face[0, 8]
-    temp[0, 7] = face[0, 5]
-    temp[0, 8] = face[0, 2]
+    temp[0, 0], temp[0,1], temp[0,2], temp[0,3], temp[0,4], temp[0,5],temp[0,6],temp[0,7], temp[0,8] = face[0, 6],face[0, 3],face[0, 0],face[0, 7],face[0, 4],face[0, 1],face[0, 8],face[0, 5],face[0, 2]
+
     return temp
 
 # method to rotate particular face counter clock wise or anti clock wise
